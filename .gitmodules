@@ -1,0 +1,3 @@
+[submodule "themes/persian-hugo"]
+	path = themes/persian-hugo
+	url = git@github.com:themefisher/persian-hugo.git

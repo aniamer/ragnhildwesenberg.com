@@ -1,0 +1,11 @@
+<footer class="py-4">
+    <div class="container text-center">
+      <p>{{ .Site.Params.copyright | markdownify }}</p>
+    </div>
+</footer>
+
+{{ "<!-- JS Plugins -->" | safeHTML }}
+{{ range .Site.Params.plugins.js}}
+<script src="{{ .link | absURL }}"></script>
+{{ end }}
+  
