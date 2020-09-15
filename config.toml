@@ -5,6 +5,9 @@ languageCode = "en-us"
 # post pagination
 paginate = "5"
 
+[params.homepage.photo]
+URL = "images/rghld_main.jpg"
+
 ############################# output ##############################
 [outputs]
 home = [ "HTML", "RSS", "json"]
@@ -39,20 +42,19 @@ URL = "about"
 weight = 2
 
 [[menu.main]]
-name = "Category"
-URL = "categories/nature/"
+name = "News"
+URL = "news"
 weight = 3
+
+[[menu.main]]
+name = "Projects"
+URL = "projects"
+weight = 4
 
 [[menu.main]]
 name = "Contact"
 URL = "contact"
-weight = 4
-
-[[menu.main]]
-name = "Privacy Policy"
-URL = "privacy-policy"
 weight = 5
-
 
 ############################# social site ########################
 [[params.social]]
