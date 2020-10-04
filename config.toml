@@ -43,17 +43,17 @@ weight = 2
 
 [[menu.main]]
 name = "News"
-URL = "news"
+URL = "#"
 weight = 3
 
 [[menu.main]]
 name = "Projects"
-URL = "projects"
+URL = "#"
 weight = 4
 
 [[menu.main]]
 name = "Contact"
-URL = "contact"
+URL = "#"
 weight = 5
 
 ############################# social site ########################
