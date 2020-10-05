@@ -1,5 +1,5 @@
 ---
-title: "I'm a Freelance musician Based In Stockholm"
+title: "I'm a freelance musician based in Stockholm"
 image: "images/about.jpg"
 description: "This is meta description."
 draft: false
@@ -15,12 +15,5 @@ My languages are Norwegian, Swedish and English.
 
 <div class="facts">
 
-## Some Facts
-* In enim justo, rhoncus ut, ullamcorper ultricies
-* Curabitur ullamcorper ultricies ullamcorper ultricies
-* Donec vitae sapien utlorem ullamcorper ultricies
-* Curabitur ullamcorper ultricies ullamcorper ultricies
-* In enim justo, rhoncus ut, ullamcorper ultricies
-* Curabitur ullamcorper ultricies ullamcorper ultricies
 
 </div>
