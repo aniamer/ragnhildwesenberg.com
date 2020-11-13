@@ -1,4 +1,5 @@
 {{ "<!-- navigation -->" | safeHTML }}
+{{ $page := . }}
 <header class="py-4">
   <div class="container-fluid">
     <!-- navbar -->
@@ -23,9 +24,13 @@
             </div>
           </li>
           {{ else }}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-          </li>
+            {{ $is := or ($page.IsMenuCurrent "main" .) (eq .Name $page.Title)}}
+            
+            <li 
+            class="nav-item{{ if $is }} active {{ end }}">
+              <a class="nav-link"
+              href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+            </li>
           {{ end }}
           {{ end }}
         </ul>

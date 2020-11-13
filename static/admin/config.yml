@@ -1,0 +1,45 @@
+backend:
+  name: github
+  repo: mohamedamer/ragnhildwesenberg.com
+  base_url: https://europe-west1-netlify-cms-oauth-764c6.cloudfunctions.net
+  auth_endpoint: /oauth/auth
+
+publish_mode: editorial_workflow
+
+media_folder: static/images/
+public_folder: images/uploads
+
+collections:
+  - name: "news"
+    label: "news"
+    folder: "content/news"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image"}
+
+  - name: "contact"
+    label: "contact"
+    folder: "content/contact"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image"}
+
+  - name: "about"
+    label: "About"
+    folder: "content/about"
+    create: true
+    preview_path: "news/{{title}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image"}
+
