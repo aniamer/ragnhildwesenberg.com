@@ -20,6 +20,16 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Image", name: "image", widget: "image"}
 
+  - name: "projects"
+    label: "projects"
+    folder: "content/projects"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image"}
+
   - name: "contact"
     label: "contact"
     folder: "content/contact"
