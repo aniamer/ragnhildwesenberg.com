@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8">
-    <title>{{ .Title }}</title>
+    <title itemprop="name">{{ .Title }} | {{ .Site.Title }}</title>
   
     {{ "<!-- mobile responsive meta -->" | safeHTML }}
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -25,5 +25,74 @@
     <meta property="og:image" content="{{ . | absURL }}" />
     {{ end }}
     {{ template "_internal/opengraph.html" . }}
+    
+    <!-- All the meta tags below will come under this meta partial -->
+    <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+    <meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
+    <meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
+    <meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
   
+    <meta name="description" content="{{ .Params.description }}" />
+    <meta itemprop="description" content="{{ .Params.description }}" />
+    <meta property="og:description" content="{{ .Params.description }}" />
+    <meta name="twitter:description" content="{{ .Params.description }}" />
+
+    <base href="{{ .Permalink }}">
+    <link rel="canonical" href="{{ .Permalink }}" itemprop="url" /> 
+    <meta name="url" content="{{ .Permalink }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+
+    <meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" /> 
+
+    {{ with .OutputFormats.Get "RSS" }}
+      <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+      <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    {{ end }}
+    <!-- Manifest File -->
+    <link rel="manifest" href="{{ .Site.BaseURL }}manifest.json" />
+
+    <meta name="robots" content="index,follow" /> 
+    <meta name="googlebot" content="index,follow" />
+    <meta name="keywords" content="" />
+    <meta name="imagemode" content="force" />
+    <meta name="coverage" content="Worldwide" /> 
+    <meta name="distribution" content="Global" />
+    <meta name="HandheldFriendly" content="True" /> 
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="apple-mobile-web-app-title" content="{{ .Site.Params.sitename }}" /> 
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-touch-fullscreen" content="yes" /> 
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "BreadcrumbList",
+      "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Contacts",
+        "item": "https://ragnhildwesenberg.com/contact"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://ragnhildwesenberg.com/projects"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "News",
+        "item": "https://ragnhildwesenberg.com/news"
+      },{
+        "@type": "ListItem",
+        "position": 4,
+        "name": "About me",
+        "item": "https://ragnhildwesenberg.com/about"
+      }
+      ]
+    }
+    </script>
   </head>
