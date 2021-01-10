@@ -1,7 +1,7 @@
 ---
 title: sthlm underground
 date: 2021-01-10T18:07:32.660Z
-image: images/uploads/received_1491914880941450.jpeg
+image: images/received_1491914880941450.jpeg
 ---
 I'm a member of the Swedish hard rock band called sthlm underground. We are doing the band thing: rehearsing in a basement, playing gigs, recording and releasing our music. 
 
