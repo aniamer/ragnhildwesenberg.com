@@ -635,3 +635,6 @@ mark {
     font-style: italic; }
   .quote-by {
     color: #222; }
+
+.social-icons {
+  font-size: 30px; }
