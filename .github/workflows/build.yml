@@ -37,4 +37,4 @@ jobs:
       
       - run: hugo --minify
       
-      - run: gsutil -m rsync -R public gs://www.ragnhildwesenberg.com
+      - run: gsutil -m rsync -R public gs://archive.ragnhildwesenberg.com
